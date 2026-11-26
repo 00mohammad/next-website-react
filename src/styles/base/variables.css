@@ -1,0 +1,16 @@
+﻿:root {
+  --color-primary: #2563eb;
+  --color-text: #171717;
+  --color-background: #ffffff;
+  --color-muted: #737373;
+  --color-border: #e5e5e5;
+
+  --font-family: Inter, Arial, sans-serif;
+
+  --container-width: 1200px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 8%);
+}
