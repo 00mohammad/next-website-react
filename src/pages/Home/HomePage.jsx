@@ -1,33 +1,30 @@
-﻿import Button from "../../components/ui/Button";
-import { useProducts } from "../../features/products/hooks/useProducts";
-import Loading from "../../components/feedback/Loading";
-import ErrorMessage from "../../components/feedback/ErrorMessage";
-
-function HomePage() {
-  const { data: products, isLoading, isError } = useProducts();
-
-  if (isLoading) return <Loading />;
-  if (isError) return <ErrorMessage message="Could not load products." />;
-
+﻿
+function Header() {
   return (
-    <section className="container home-page">
-      <h1>Welcome to React</h1>
-      <p>Your professional frontend project is ready.</p>
-      <Button onClick={() => console.log("Project is ready!")}>
-        Get Started
-      </Button>
+    <header className="border-b border-slate-800 bg-slate-950">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+        <a href="/" className="text-2xl font-bold text-white">
+          Next<span className="text-blue-500">Web</span>
+        </a>
 
-      <h2>Demo Products</h2>
-      <div className="product-list">
-        {products?.map((product) => (
-          <article className="product-card" key={product.id}>
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
-          </article>
-        ))}
-      </div>
-    </section>
+        <div className="hidden items-center gap-8 text-slate-300 md:flex">
+          <a href="/" className="transition hover:text-blue-400">
+            Home
+          </a>
+          <a href="#features" className="transition hover:text-blue-400">
+            Features
+          </a>
+          <a href="#products" className="transition hover:text-blue-400">
+            Products
+          </a>
+        </div>
+
+        <button className="rounded-lg bg-blue-600 px-5 py-2 text-white transition hover:bg-blue-700">
+          Get Started
+        </button>
+      </nav>
+    </header>
   );
 }
 
-export default HomePage;
+export default Header;

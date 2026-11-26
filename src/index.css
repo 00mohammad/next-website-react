@@ -1,4 +1,7 @@
-﻿@import "./styles/base/reset.css";
+﻿
+@import "tailwindcss";
+
+@import "./styles/base/reset.css";
 @import "./styles/base/variables.css";
 
 body {
